@@ -1,4 +1,4 @@
-ROLE_NAMES := packages shell dev ops
+ROLE_NAMES := packages office_tools
 
 .PHONY: help
 

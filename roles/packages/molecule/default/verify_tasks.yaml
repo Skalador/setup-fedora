@@ -1,0 +1,16 @@
+---
+- name: Check if tree is installed
+  ansible.builtin.command: tree --version
+  register: tree_check
+
+- name: Display verification results
+  debug:
+    msg: "tree is installed with {{ tree_check.stdout }}"
+
+- name: Check if flatpak is installed
+  ansible.builtin.command: flatpak --version
+  register: flatpak_check
+
+- name: Display verification results
+  debug:
+    msg: "flatpak is installed with {{ flatpak_check.stdout }}"

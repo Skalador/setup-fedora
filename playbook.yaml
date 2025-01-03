@@ -1,0 +1,10 @@
+---
+- name: Configure host.
+  hosts: localhost
+  connection: local
+  vars_files:
+    - vars/prerequisite_packages.yaml
+    - vars/user_environment.yaml
+  roles:
+    - packages
+    - office_tools

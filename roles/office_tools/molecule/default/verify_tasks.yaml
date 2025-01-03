@@ -1,0 +1,8 @@
+---
+- name: Check if keepassxc is installed
+  ansible.builtin.command: keepassxc --version
+  register: keepassxc_check
+
+- name: Display verification results
+  debug:
+    msg: "keepassxc is installed with {{ keepassxc_check.stdout }}"

@@ -1,0 +1,13 @@
+---
+- name: Install KeepassXC for macOS
+  ansible.builtin.package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - keepassxc
+  register: result
+  until: result is successful
+
+- name: Display Packages result
+  ansible.builtin.debug:
+    msg: "{{ result }}"

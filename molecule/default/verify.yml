@@ -1,0 +1,7 @@
+---
+- name: Verify
+  hosts: all
+
+  tasks:
+    - include_tasks: ../../roles/packages/molecule/default/verify_tasks.yaml
+    - include_tasks: ../../roles/office_tools/molecule/default/verify_tasks.yaml

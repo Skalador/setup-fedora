@@ -1,0 +1,17 @@
+---
+- name: Update package list
+  become: true
+  ansible.builtin.package:
+    update_cache: true
+
+- name: Upgrade all packages
+  become: true
+  changed_when: false
+  ansible.builtin.package:
+    name: "*"
+    state: latest
+
+- name: Install packages
+  become: true
+  ansible.builtin.package:
+    name: "{{ prerequisite_packages }}"
