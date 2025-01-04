@@ -1,5 +1,6 @@
 ---
-- name: Install KeepassXC for macOS
+- name: Install KeepassXC
+  become: true
   ansible.builtin.package:
     name: "{{ item }}"
     state: present
