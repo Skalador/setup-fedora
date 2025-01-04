@@ -1,5 +1,4 @@
-dnf update
-dnf upgrade -y
+dnf update -y
 
 dnf install ansible ansible-lint -y
 
