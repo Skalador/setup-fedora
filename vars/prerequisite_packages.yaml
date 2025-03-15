@@ -8,5 +8,4 @@ prerequisite_packages:
   - jq
   - yamllint
   - tree
-  - xz
   - flatpak
