@@ -1,9 +1,4 @@
 ---
-- name: Update package list
-  become: true
-  ansible.builtin.package:
-    update_cache: true
-
 - name: Upgrade all packages
   become: true
   changed_when: false
