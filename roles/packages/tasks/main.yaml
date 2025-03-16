@@ -4,6 +4,7 @@
   changed_when: false
   ansible.builtin.package:
     name: "*"
+    update_cache: true
     state: latest
 
 - name: Install packages
