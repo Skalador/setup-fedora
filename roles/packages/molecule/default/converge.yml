@@ -1,6 +1,19 @@
 ---
+- name: Fail if molecule group is missing
+  hosts: localhost
+  tasks:
+    - name: Print some info
+      ansible.builtin.debug:
+        msg: "{{ groups }}"
+
+    - name: Assert group existence
+      ansible.builtin.assert:
+        that: "'molecule' in groups"
+        fail_msg: |
+          molecule group was not found inside inventory groups: {{ groups }}
+
 - name: Converge
-  hosts: all
+  hosts: molecule
   gather_facts: false
   pre_tasks:
     - name: Load 'prerequisite_packages' variables from File
@@ -9,4 +22,4 @@
   tasks:
     - name: Include packages role
       include_role:
-        name: packages
+        name: ../../../../packages

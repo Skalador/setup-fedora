@@ -14,3 +14,11 @@
 - name: Display verification results
   debug:
     msg: "flatpak is installed with {{ flatpak_check.stdout }}"
+
+- name: Check if git is installed
+  ansible.builtin.command: git --version
+  register: git_check
+
+- name: Display verification results
+  debug:
+    msg: "git is installed with {{ git_check.stdout }}"

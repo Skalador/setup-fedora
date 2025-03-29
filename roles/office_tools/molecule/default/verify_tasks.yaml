@@ -2,6 +2,8 @@
 - name: Check if keepassxc is installed
   ansible.builtin.command: keepassxc --version
   register: keepassxc_check
+  failed_when:
+    - "'command not found' in keepassxc_check.stderr"
 
 - name: Display verification results
   debug:
