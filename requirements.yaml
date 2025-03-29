@@ -1,3 +1,5 @@
 ---
 roles:
   - name: Skalador.oc_client
+collections:
+  - containers.podman

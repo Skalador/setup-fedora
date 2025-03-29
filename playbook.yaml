@@ -1,7 +1,6 @@
 ---
 - name: Configure host.
-  hosts: localhost
-  connection: local
+  hosts: all
   vars_files:
     - vars/prerequisite_packages.yaml
     - vars/user_environment.yaml

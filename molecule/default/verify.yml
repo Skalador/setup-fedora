@@ -1,6 +1,6 @@
 ---
 - name: Verify
-  hosts: all
+  hosts: molecule
 
   tasks:
     - include_tasks: ../../roles/packages/molecule/default/verify_tasks.yaml
