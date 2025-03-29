@@ -2,6 +2,7 @@
 exclude_paths:
   - roles/packages/molecule/default/verify_tasks.yaml
   - roles/office_tools/molecule/default/verify_tasks.yaml
+  - venv/
 skip_list:
   - schema[meta]
   - role-name
